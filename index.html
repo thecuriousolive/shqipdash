@@ -126,6 +126,29 @@
       .btn-small { min-height: 48px; padding: 10px 18px; font-size: 1rem; border-radius: 12px; }
       .btn-block { width: 100%; }
 
+      /* ---------- quick help (big simple buttons) ---------- */
+      .quick-grid { margin-top: 24px; display: grid; gap: 14px; }
+      @media (min-width: 700px) { .quick-grid { grid-template-columns: 1fr 1fr; } }
+      .quick-btn {
+        display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 5px;
+        min-height: 104px; padding: 20px 22px; border-radius: 18px;
+        background: var(--surface); border: 2.5px solid var(--olive); color: var(--ink);
+        text-decoration: none; box-shadow: var(--shadow);
+      }
+      .quick-btn:hover { border-color: var(--coral); }
+      .quick-btn b { font-size: 1.38rem; font-weight: 900; line-height: 1.2; }
+      .quick-btn span { color: var(--muted); font-size: 1.06rem; line-height: 1.35; }
+      .quick-btn .qprice { color: var(--olive-deep); font-weight: 900; font-size: 1.06rem; }
+      .quick-note { margin-top: 16px; font-size: 1.05rem; color: var(--muted); }
+      .quick-note a { color: var(--ink); font-weight: 800; }
+
+      /* ---------- work with us ---------- */
+      .work-cards { margin-top: 24px; display: grid; gap: 14px; }
+      @media (min-width: 700px) { .work-cards { grid-template-columns: 1fr 1fr 1fr; } }
+      .work-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+      .work-card h3 { font-size: 1.12rem; font-weight: 900; }
+      .work-card p { margin-top: 7px; color: var(--muted); font-size: 0.99rem; line-height: 1.5; }
+
       /* ---------- hero ---------- */
       .hero { padding: 34px 0 0; }
       .hero-grid { display: grid; gap: 28px; align-items: center; }
@@ -356,6 +379,7 @@
           <a href="#pricing">Pricing</a>
           <a href="#usa">USA Shopping</a>
           <a href="#faq">FAQ</a>
+          <a href="#work">Work With Us</a>
         </nav>
         <a class="btn btn-wa btn-small top-wa" href="https://wa.me/355697928722" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91A9.87 9.87 0 0 0 12.04 2m0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.24-8.24 8.24m4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.73-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.13.16 1.56.1.48-.07 1.47-.58 1.74-1.14.27-.56.27-1.04.19-1.14-.08-.1-.23-.16-.48-.28"/></svg>
@@ -411,12 +435,45 @@
         </div>
       </div>
 
+      <!-- ======================= QUICK HELP (BIG BUTTONS) ======================= -->
+      <section class="block" id="quick">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Need help today? Tap a big button</h2>
+            <p>These are the things people ask for most. Tap one — it opens WhatsApp with the words already written. You just press send.</p>
+          </div>
+          <div class="quick-grid">
+            <a class="quick-btn" href="https://wa.me/355697928722" target="_blank" rel="noopener" data-msg="Hi ShqipDash! Please pick up my prescription from the pharmacy and bring it to me. Details:">
+              <b>Pick Up My Prescription</b>
+              <span>From the pharmacy, brought to your door</span>
+              <span class="qprice">Pickup from $10</span>
+            </a>
+            <a class="quick-btn" href="https://wa.me/355697928722" target="_blank" rel="noopener" data-msg="Hi ShqipDash! I need a personal shopper. Please do my shopping for me. My list is:">
+              <b>I Need a Personal Shopper</b>
+              <span>Groceries and shopping done for you</span>
+              <span class="qprice">Shopping runs from $15</span>
+            </a>
+            <a class="quick-btn" href="https://wa.me/355697928722" target="_blank" rel="noopener" data-msg="Hi ShqipDash! Please collect my package and bring it to me. Carrier and tracking details:">
+              <b>Pick Up My Package</b>
+              <span>Post office or courier pickup, delivered to you</span>
+              <span class="qprice">Collection from $15</span>
+            </a>
+            <a class="quick-btn" href="https://wa.me/355697928722" target="_blank" rel="noopener" data-msg="Hi ShqipDash! I need documents / a small item picked up and dropped off. Details:">
+              <b>Documents Picked Up or Dropped Off</b>
+              <span>Papers, envelopes and small items, across town</span>
+              <span class="qprice">From $10</span>
+            </a>
+          </div>
+          <p class="quick-note">Not sure which one fits? <a href="https://wa.me/355697928722?text=Hi%20ShqipDash!%20I%20need%20help%20with%20something%20in%20Vlor%C3%AB." target="_blank" rel="noopener">Just message us on WhatsApp</a> and tell us in your own words — or read <a href="#services">all our services in detail below</a>.</p>
+        </div>
+      </section>
+
       <!-- ======================= SERVICES ======================= -->
       <section class="block" id="services">
         <div class="wrap">
           <div class="sec-head">
-            <h2>What we can do for you</h2>
-            <p>Ten services, one WhatsApp number. Send a message, get a clear quote, and approve it before anything starts. Need it? ShqipDash it?</p>
+            <h2>All our services, in detail</h2>
+            <p>For readers who like the full picture: all ten services, with prices. Every one starts the same way — one WhatsApp message, a clear quote, and your approval before anything starts.</p>
           </div>
           <div class="svc-grid">
 
@@ -737,6 +794,82 @@
         </div>
       </section>
 
+      <!-- ======================= WORK WITH US ======================= -->
+      <section class="block" id="work">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Work with ShqipDash — get hired as a shopper</h2>
+            <p>Live in Vlorë and want flexible work you choose yourself? Become a ShqipDash helper: shop, pick up and deliver for local customers — a few jobs a week, or more when you want them.</p>
+          </div>
+          <div class="work-cards">
+            <div class="work-card">
+              <h3>1. See the job — and your pay — first</h3>
+              <p>Every available job is posted as a simple job card: what it is, where to pick up, where to deliver, and exactly what <strong>you</strong> earn. The pay shown is the pay you get if the job is done as described — plus 100% of any tip the customer gives.</p>
+            </div>
+            <div class="work-card">
+              <h3>2. You choose the jobs</h3>
+              <p>Claim only the jobs you want — first to claim gets it. No fixed hours, no obligation to accept, and you never pay for a customer's shopping out of your own pocket: product money is always prepaid or given to you in advance.</p>
+            </div>
+            <div class="work-card">
+              <h3>3. Paid every week</h3>
+              <p>Earnings for Monday–Sunday are paid the following Wednesday, free, by Albanian bank transfer — or by Wise, Revolut or PayPal if you prefer. You choose your payout method in the application below.</p>
+            </div>
+          </div>
+          <form class="form-panel" id="shopper-form" novalidate>
+            <div class="f-grid">
+              <div>
+                <label class="f-label" for="s-name">Your full name</label>
+                <input id="s-name" name="sname" type="text" autocomplete="name" placeholder="e.g. Ana Kola" />
+              </div>
+              <div>
+                <label class="f-label" for="s-phone">Your WhatsApp number</label>
+                <input id="s-phone" name="sphone" type="tel" autocomplete="tel" placeholder="+355 6x xxx xxxx" />
+              </div>
+              <div>
+                <label class="f-label" for="s-area">Where in Vlorë do you live?</label>
+                <input id="s-area" name="sarea" type="text" placeholder="e.g. Lungomare, Skelë, Uji i Ftohtë" />
+              </div>
+              <div>
+                <label class="f-label" for="s-transport">How do you get around?</label>
+                <select id="s-transport" name="stransport">
+                  <option value="On foot">On foot</option>
+                  <option value="Bicycle">Bicycle</option>
+                  <option value="Motorbike / scooter">Motorbike / scooter</option>
+                  <option value="Car">Car</option>
+                </select>
+              </div>
+              <div>
+                <label class="f-label" for="s-languages">Languages you speak</label>
+                <input id="s-languages" name="slanguages" type="text" placeholder="e.g. Albanian and English" />
+              </div>
+              <div>
+                <label class="f-label" for="s-hours">When are you usually available?</label>
+                <input id="s-hours" name="shours" type="text" placeholder="e.g. Weekday mornings, weekends" />
+              </div>
+              <div>
+                <label class="f-label" for="s-payout">How would you like to be paid?</label>
+                <select id="s-payout" name="spayout">
+                  <option value="Albanian bank transfer">Albanian bank transfer (weekly, free)</option>
+                  <option value="Wise">Wise</option>
+                  <option value="Revolut">Revolut</option>
+                  <option value="PayPal">PayPal</option>
+                  <option value="Cash pickup in Vlorë">Cash pickup in Vlorë</option>
+                </select>
+              </div>
+              <div>
+                <label class="f-label" for="s-notes">Anything else? <span>(optional)</span></label>
+                <input id="s-notes" name="snotes" type="text" placeholder="e.g. I know the Lungomare shops well" />
+              </div>
+            </div>
+            <p class="form-err" id="shopper-err" role="alert"></p>
+            <div style="margin-top:22px">
+              <button class="btn btn-blue btn-block" type="submit" style="min-height:60px; font-size:1.12rem">Apply to Be a Shopper</button>
+              <p class="form-fine">Opens WhatsApp with your application written out — you just press send. Helpers must be 18+, have a smartphone, and complete a short ID check and trial job before starting. We explain pay and paperwork clearly before your first job — no surprises.</p>
+            </div>
+          </form>
+        </div>
+      </section>
+
       <!-- ======================= SHQIPDASH+ ======================= -->
       <section class="block" id="plus">
         <div class="wrap">
@@ -950,6 +1083,32 @@
             if (c.price > 0) lines.push('Estimated total before shipping/customs: ' + money(c.total) + ' (product ' + money(c.price) + ' + fee ' + money(c.fee) + ')');
           }
           window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+        });
+
+        /* ---- Shopper application form ---- */
+        var sform = document.getElementById('shopper-form');
+        var serr = document.getElementById('shopper-err');
+        sform.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var sname = val('s-name');
+          var sphone = val('s-phone');
+          if (!sname || !sphone) {
+            serr.textContent = 'Almost there — please add your name and WhatsApp number so we can reach you.';
+            serr.classList.add('show');
+            (!sname ? document.getElementById('s-name') : document.getElementById('s-phone')).focus();
+            return;
+          }
+          serr.classList.remove('show');
+          var slines = ['ShqipDash shopper application', '----------------------'];
+          slines.push('Name: ' + sname);
+          slines.push('My WhatsApp: ' + sphone);
+          if (val('s-area')) slines.push('Area of Vlorë: ' + val('s-area'));
+          slines.push('Transport: ' + document.getElementById('s-transport').value);
+          if (val('s-languages')) slines.push('Languages: ' + val('s-languages'));
+          if (val('s-hours')) slines.push('Availability: ' + val('s-hours'));
+          slines.push('Preferred payout: ' + document.getElementById('s-payout').value);
+          if (val('s-notes')) slines.push('Notes: ' + val('s-notes'));
+          window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(slines.join('\n')), '_blank');
         });
 
         /* ---- Service worker (progressive enhancement) ---- */
